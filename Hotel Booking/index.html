@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Dubai Hotels Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="slide-up">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Dubai<span style="color: var(--accent-color);">Hotels</span></div>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Hotels</a>
+          <a href="#">Deals</a>
+          <a href="#">About</a>
+          <a href="#" class="register-btn">Register</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Search -->
+  <section class="hero fade-in">
+    <div class="container">
+      <h1>Discover Luxury Stays in Dubai</h1>
+      <p>Find and book the perfect hotel from our curated selection of luxury and budget accommodations with free
+        cancellations.</p>
+
+      <div class="search-box pulse">
+        <form class="search-form" id="hotelSearchForm">
+          <div class="search-group">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" placeholder="Where are you going?" value="Dubai">
+          </div>
+          <div class="search-group">
+            <label for="checkin">Check-in Date</label>
+            <input type="date" id="checkin">
+          </div>
+          <div class="search-group">
+            <label for="checkout">Check-out Date</label>
+            <input type="date" id="checkout">
+          </div>
+          <div class="search-group">
+            <label for="guests">Guests & Rooms</label>
+            <select id="guests">
+              <option value="1">1 Adult, 1 Room</option>
+              <option value="2" selected>2 Adults, 1 Room</option>
+              <option value="3">3 Adults, 1 Room</option>
+              <option value="4">4 Adults, 1 Room</option>
+              <option value="family">Family Suite</option>
+            </select>
+          </div>
+          <button type="submit" class="search-btn">Search Hotels</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Dates Section -->
+  <section class="popular-dates container fade-in">
+    <h2 class="section-title">Popular dates to travel</h2>
+    <div class="date-cards">
+      <div class="date-card">
+        <div class="date-title">Tonight</div>
+        <div class="date-value">22 May</div>
+      </div>
+      <div class="date-card">
+        <div class="date-title">Tomorrow</div>
+        <div class="date-value">24 May</div>
+      </div>
+      <div class="date-card">
+        <div class="date-title">This Weekend</div>
+        <div class="date-value">24 May - 25 May</div>
+      </div>
+      <div class="date-card">
+        <div class="date-title">Next Weekend</div>
+        <div class="date-value">31 May - 1 Jun</div>
+      </div>
+      <div class="date-card">
+        <div class="date-title">Summer Break</div>
+        <div class="date-value">15 Jun - 30 Jun</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="container fade-in">
+    <div class="filters">
+      <h3 class="filter-title">Filter by:</h3>
+      <div class="filter-options">
+        <div class="filter-option active">
+          <i class="fas fa-star"></i> <span>All</span>
+        </div>
+        <div class="filter-option">
+          <i class="fas fa-star"></i> <span>5 Star</span>
+        </div>
+        <div class="filter-option">
+          <i class="fas fa-star"></i> <span>4 Star</span>
+        </div>
+        <div class="filter-option">
+          <i class="fas fa-swimming-pool"></i> <span>Pool</span>
+        </div>
+        <div class="filter-option">
+          <i class="fas fa-wifi"></i> <span>Free WiFi</span>
+        </div>
+        <div class="filter-option">
+          <i class="fas fa-utensils"></i> <span>Restaurant</span>
+        </div>
+        <div class="filter-option">
+          <i class="fas fa-spa"></i> <span>Spa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Hotels Section -->
+  <section class="featured container">
+    <div class="section-header fade-in">
+      <h2 class="section-title">Premium Dubai Hotels</h2>
+      <a href="#" class="view-all">View All →</a>
+    </div>
+
+    <div id="spinner" class="spinner"></div>
+
+    <div class="hotel-grid" id="hotelContainer">
+      <!-- Hotel 1 -->
+      <div class="hotel-card slide-up">
+        <div class="hotel-badge">BESTSELLER</div>
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" alt="Burj Al Arab" class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">Burj Al Arab Jumeirah</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Jumeirah Beach
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-swimming-pool"></i> Pool</span>
+            <span class="amenity"><i class="fas fa-spa"></i> Spa</span>
+          </div>
+          <div class="hotel-price">$300 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.5</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 2 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.1s;">
+        <div class="hotel-badge">LUXURY</div>
+        <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d" alt="Atlantis The Palm"
+          class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">Atlantis The Palm</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Palm Jumeirah
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-swimming-pool"></i> Pool</span>
+            <span class="amenity"><i class="fas fa-utensils"></i> 5 Restaurants</span>
+          </div>
+          <div class="hotel-price">$350 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.2</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 3 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.2s;">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Armani Hotel" class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">Armani Hotel Dubai</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Downtown Dubai
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-spa"></i> Spa</span>
+            <span class="amenity"><i class="fas fa-dumbbell"></i> Gym</span>
+          </div>
+          <div class="hotel-price">$400 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.3</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 4 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.3s;">
+        <div class="hotel-badge">POPULAR</div>
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4" alt="JW Marriott" class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">JW Marriott Marquis</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Business Bay
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-utensils"></i> 3 Restaurants</span>
+            <span class="amenity"><i class="fas fa-concierge-bell"></i> Room Service</span>
+          </div>
+          <div class="hotel-price">$350 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.0</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 5 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.4s;">
+        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791" alt="Raffles Dubai" class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">Raffles Dubai</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Wafi City
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-swimming-pool"></i> Pool</span>
+            <span class="amenity"><i class="fas fa-spa"></i> Spa</span>
+          </div>
+          <div class="hotel-price">$300 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.1</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 6 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.5s;">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Sofitel Dubai" class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">Sofitel Dubai Downtown</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Downtown Dubai
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-swimming-pool"></i> Pool</span>
+            <span class="amenity"><i class="fas fa-utensils"></i> 5 Restaurants</span>
+          </div>
+          <div class="hotel-price">$200 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.2</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+      <!-- Hotel 7 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.6s;">
+        <img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c" alt="The Ritz-Carlton"
+          class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">The Ritz-Carlton Dubai</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> JBR Walk
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span class="amenity"><i class="fas fa-umbrella-beach"></i> Private Beach</span>
+            <span class="amenity"><i class="fas fa-spa"></i> Spa</span>
+          </div>
+          <div class="hotel-price">$450 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.4</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Hotel 8 -->
+      <div class="hotel-card slide-up" style="animation-delay: 0.7s;">
+        <div class="hotel-badge">FAMILY FRIENDLY</div>
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Jumeirah Beach Hotel"
+          class="hotel-img">
+        <div class="hotel-info">
+          <h3 class="hotel-name">Jumeirah Beach Hotel</h3>
+          <div class="hotel-location">
+            <i class="fas fa-map-marker-alt"></i> Jumeirah Beach
+          </div>
+          <div class="hotel-amenities">
+            <span class="amenity"><i class="fas fa-child"></i> Kids Club</span>
+            <span class="amenity"><i class="fas fa-swimming-pool"></i> 3 Pools</span>
+            <span class="amenity"><i class="fas fa-utensils"></i> Family Dining</span>
+          </div>
+          <div class="hotel-price">$480 <span class="price-per">/ night</span></div>
+          <div class="hotel-rating">9.0</div>
+          <button class="book-btn">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deals Section -->
+  <section class="deals container fade-in">
+    <div class="section-header">
+      <h2 class="section-title">Exclusive Dubai Deals</h2>
+      <a href="#" class="view-all">View All Deals →</a>
+    </div>
+
+
+
+    <!--  -->
+    <div class="deals-grid">
+      <div class="deal-card">
+        <div class="deal-img-container">
+          <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4" alt="Summer Deal" class="deal-img">
+        </div>
+        <div class="deal-info">
+          <h3>Summer Escape</h3>
+          <p>Enjoy 30% off at select hotels when you book before June 30</p>
+          <button class="deal-btn">View Deal</button>
+        </div>
+      </div>
+
+      <div class="deal-card">
+        <div class="deal-img-container">
+          <div class="deal-badge">FREE NIGHT</div>
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Stay Longer Deal"
+            class="deal-img">
+        </div>
+        <div class="deal-info">
+          <h3>Stay 4 Pay 3</h3>
+          <p>Book 4 nights and get 1 night free at participating hotels</p>
+          <button class="deal-btn">View Deal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials fade-in">
+      <div class="container">
+        <h2 class="section-title">What Our Guests Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              The Burj Al Arab experience was worth every penny. The service was impeccable and the views were
+              breathtaking. Will definitely return!
+            </div>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah K." class="author-img">
+              <div class="author-info">
+                <h4>Sarah K.</h4>
+                <p>London, UK</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              Booking through DubaiHotels was seamless. Got a great deal at Atlantis and the kids loved the waterpark.
+              Highly recommended!
+            </div>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="author-img">
+              <div class="author-info">
+                <h4>Michael T.</h4>
+                <p>New York, USA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              The Armani Hotel's location was perfect for our shopping trip. The room was luxurious and the staff went
+              above and beyond.
+            </div>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Aisha M." class="author-img">
+              <div class="author-info">
+                <h4>Aisha M.</h4>
+                <p>Dubai, UAE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter fade-in">
+      <div class="container">
+        <h2>Subscribe for Exclusive Deals</h2>
+        <p>Get the best hotel deals and travel tips straight to your inbox</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- About Dubai Section -->
+    <section class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title">More about Dubai</h2>
+            <p>Discover the allure of Dubai's skyline. Dubai offers world-class shopping, with visitors able to explore
+              more than a month's worth of holiday experiences and shopping trips across the globe, covering all four
+              corners of the world. Most holidays are centered around weekends, with alternative choices available
+              during summer months.</p>
+
+            <div class="travel-paths">
+              <h3 style="margin: 20px 0 10px;">Dubai travel paths</h3>
+              <div class="travel-path">
+                <i class="fas fa-chevron-right"></i>
+                <span>Dubai hotels & accommodation</span>
+              </div>
+              <div class="travel-path">
+                <i class="fas fa-chevron-right"></i>
+                <span>Things to do in Dubai</span>
+              </div>
+              <div class="travel-path">
+                <i class="fas fa-chevron-right"></i>
+                <span>Luxury hotels in Dubai</span>
+              </div>
+              <div class="travel-path">
+                <i class="fas fa-chevron-right"></i>
+                <span>4-star hotels in Dubai</span>
+              </div>
+              <div class="travel-path">
+                <i class="fas fa-chevron-right"></i>
+                <span>Dubai hotels with breakfast</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090" alt="Dubai Skyline">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>DubaiHotels</h3>
+            <p>Find the perfect hotel for your Dubai adventure with our curated selection of luxury and budget
+              accommodations.</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Hotels</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">About Dubai</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cancellation Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> Dubai Marina, Dubai, UAE</li>
+              <li><i class="fas fa-phone"></i> +971 4 123 4567</li>
+              <li><i class="fas fa-envelope"></i> info@dubaihotels.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2023 DubaiHotels. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Complete Your Booking</h2>
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="bookingHotel">Hotel</label>
+            <input type="text" id="bookingHotel" readonly>
+          </div>
+          <div class="form-group">
+            <label for="bookingDates">Dates</label>
+            <input type="text" id="bookingDates" readonly>
+          </div>
+          <div class="form-group">
+            <label for="guestName">Full Name</label>
+            <input type="text" id="guestName" required>
+          </div>
+          <div class="form-group">
+            <label for="guestEmail">Email</label>
+            <input type="email" id="guestEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="guestPhone">Phone Number</label>
+            <input type="tel" id="guestPhone" required>
+          </div>
+          <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea id="specialRequests" rows="3"></textarea>
+          </div>
+          <button type="submit" class="book-btn">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Set default dates for check-in and check-out
+      document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date();
+        const tomorrow = new Date();
+        tomorrow.setDate(today.getDate() + 1);
+
+        // Format dates as YYYY-MM-DD for input fields
+        const formatDate = (date) => {
+          return date.toISOString().split('T')[0];
+        };
+
+        document.getElementById('checkin').value = formatDate(today);
+        document.getElementById('checkout').value = formatDate(tomorrow);
+
+        // Form submission handler
+        document.getElementById('hotelSearchForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const spinner = document.getElementById('spinner');
+          const hotelContainer = document.getElementById('hotelContainer');
+
+          // Show loading spinner
+          spinner.style.display = 'block';
+          hotelContainer.style.opacity = '0.5';
+
+          const destination = document.getElementById('destination').value;
+          const checkin = document.getElementById('checkin').value;
+          const checkout = document.getElementById('checkout').value;
+          const guests = document.getElementById('guests').value;
+
+          // Simulate API call delay
+          setTimeout(() => {
+            spinner.style.display = 'none';
+            hotelContainer.style.opacity = '1';
+
+            // In a real app, this would filter hotels or redirect to search results
+            alert(`Searching for hotels in ${destination} from ${checkin} to ${checkout} for ${guests} guests`);
+          }, 1500);
+        });
+
+        // Filter option click handlers
+        const filterOptions = document.querySelectorAll('.filter-option');
+        filterOptions.forEach(option => {
+          option.addEventListener('click', function () {
+            filterOptions.forEach(opt => opt.classList.remove('active'));
+            this.classList.add('active');
+
+            // In a real app, this would filter the hotel listings
+            // You would make an API call or filter the existing DOM elements
+          });
+        });
+
+        // Book Now button handlers
+        const bookButtons = document.querySelectorAll('.book-btn');
+        bookButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            const hotelCard = this.closest('.hotel-card');
+            const hotelName = hotelCard.querySelector('.hotel-name').textContent;
+
+            // Set modal values
+            document.getElementById('bookingHotel').value = hotelName;
+
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            document.getElementById('bookingDates').value = `${checkin} to ${checkout}`;
+
+            // Show modal
+            document.getElementById('bookingModal').style.display = 'flex';
+          });
+        });
+
+        // Close modal handler
+        document.querySelector('.close-modal').addEventListener('click', function () {
+          document.getElementById('bookingModal').style.display = 'none';
+        });
+
+        // Booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // In a real app, this would send the booking to your backend
+          const hotelName = document.getElementById('bookingHotel').value;
+          alert(`Booking confirmed for ${hotelName}! A confirmation has been sent to your email.`);
+
+          // Close modal
+          document.getElementById('bookingModal').style.display = 'none';
+        });
+
+        // Newsletter form submission
+        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.querySelector('.newsletter-input').value;
+
+          // In a real app, this would send to your email marketing service
+          alert(`Thank you for subscribing with ${email}! You'll receive our best deals soon.`);
+          this.reset();
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+          } else {
+            backToTopBtn.classList.remove('active');
+          }
+        });
+
+        backToTopBtn.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+
+        // Date card click handlers
+        const dateCards = document.querySelectorAll('.date-card');
+        dateCards.forEach(card => {
+          card.addEventListener('click', function () {
+            const dateValue = this.querySelector('.date-value').textContent;
+
+            // In a real app, this would set the dates in the search form
+            alert(`Would set dates to ${dateValue} in a real implementation`);
+          });
+        });
+
+        // Deal button click handlers
+        const dealButtons = document.querySelectorAll('.deal-btn');
+        dealButtons.forEach(button => {
+          button.addEventListener('click', function () {
+            const dealTitle = this.closest('.deal-card').querySelector('h3').textContent;
+            alert(`Applying ${dealTitle} - would redirect to special offers page in real implementation`);
+          });
+        });
+      });
+    </script>
+</body>
+
+</html>
